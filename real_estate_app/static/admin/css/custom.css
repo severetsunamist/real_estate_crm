@@ -1,0 +1,27 @@
+#header {
+    background: #2c3e50;
+}
+
+.module h2, .module caption, div.breadcrumbs {
+    background: #34495e !important;
+}
+
+.object-group {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.badge {
+    background: #3498db;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+.field-image_preview img {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

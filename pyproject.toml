@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "real-estate-crm"
+version = "1.0.0"
+description = "Modern Real Estate CRM with Django"
+authors = ["Your Name <your@email.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "4.2.7"
+psycopg2 = "2.9.7"  # Changed from psycopg2-binary to psycopg2
+python-telegram-bot = "20.7"
+django-storages = "1.13.2"
+boto3 = "1.28.62"
+djangorestframework = "3.14.0"
+django-filter = "23.3"
+python-dotenv = "1.0.0"
+Pillow = "10.0.1"
+django-admin-interface = "0.25.0"
+gunicorn = "21.2.0"
+
+[tool.poetry.group.dev.dependencies]
+django-debug-toolbar = "4.2.0"
+django-extensions = "3.2.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
