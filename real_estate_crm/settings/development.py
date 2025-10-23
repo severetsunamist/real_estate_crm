@@ -2,12 +2,19 @@ from .base import *
 
 DEBUG = True
 
-# Development-specific settings
-INTERNAL_IPS = ['127.0.0.1']
+# Debug Toolbar configuration
+INSTALLED_APPS += ['debug_toolbar', 'django_extensions']
+MIDDLEWARE = ['debug_toolbar.middleware.DebugToolbarMiddleware'] + MIDDLEWARE
 
-# Ensure local storage in development
-# DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+INTERNAL_IPS = [
+    '127.0.0.1',
+    'localhost',
+]
 
-# Optional: Add debug toolbar
-# INSTALLED_APPS += ['debug_toolbar']
-# MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+# Debug Toolbar settings
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': lambda request: True,
+}
+
+# Use local storage in development
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'

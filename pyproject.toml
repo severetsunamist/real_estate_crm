@@ -1,16 +1,14 @@
 [tool.poetry]
 name = "real-estate-crm"
 version = "1.0.0"
-description = "Modern Real Estate CRM with Django"
-authors = ["Your Name <your@email.com>"]
+description = "Midas Broker CRM"
+authors = ["Severe Tsunamist <severetsunamist@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 Django = "4.2.7"
-psycopg2 = "2.9.7"  # Changed from psycopg2-binary to psycopg2
+psycopg2 = "2.9.7"
 python-telegram-bot = "20.7"
-django-storages = "1.13.2"
-boto3 = "1.28.62"
 djangorestframework = "3.14.0"
 django-filter = "23.3"
 python-dotenv = "1.0.0"

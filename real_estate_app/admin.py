@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.contrib.gis import admin as gis_admin
 from django.utils.html import format_html
 from .models import Company, Contact, Object, Vacancy, ObjectImage, Agent
 
@@ -49,11 +48,22 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = ['first_name', 'last_name', 'email']
 
 @admin.register(Object)
-class ObjectAdmin(gis_admin.OSMGeoAdmin):
+class ObjectAdmin(admin.ModelAdmin):
     list_display = ['name', 'object_type', 'city', 'total_area', 'status', 'created_at']
     list_filter = ['object_type', 'city', 'status']
     search_fields = ['name', 'address', 'city']
     inlines = [ObjectImageInline, VacancyInline]
+    fieldsets = (
+        ('Basic Information', {
+            'fields': ('name', 'description', 'object_type', 'status')
+        }),
+        ('Location', {
+            'fields': ('address', 'city', 'latitude', 'longitude')
+        }),
+        ('Specifications', {
+            'fields': ('owner', 'total_area', 'floors', 'build_year')
+        }),
+    )
 
 @admin.register(Vacancy)
 class VacancyAdmin(admin.ModelAdmin):

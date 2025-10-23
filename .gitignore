@@ -6,3 +6,5 @@ staticfiles/
 media/
 .DS_Store
 .python-version
+nginx/logs/
+*.log

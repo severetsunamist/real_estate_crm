@@ -4,6 +4,19 @@
 {% block content %}
 <div class="dashboard">
     <h1>🏢 Real Estate CRM Dashboard</h1>
-    <p>Welcome to your Real Estate Management System</p>
+    <div class="stats">
+        <div class="stat-card">
+            <h3>Total Properties</h3>
+            <p class="count">{{ total_properties }}</p>
+        </div>
+        <div class="stat-card">
+            <h3>Active Vacancies</h3>
+            <p class="count">{{ active_vacancies }}</p>
+        </div>
+        <div class="stat-card">
+            <h3>Companies</h3>
+            <p class="count">{{ total_companies }}</p>
+        </div>
+    </div>
 </div>
 {% endblock %}
